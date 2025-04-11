@@ -1,6 +1,6 @@
-import { WebPlugin } from '@capacitor/core';
+import { PluginListenerHandle, WebPlugin } from '@capacitor/core';
 
-import type { ZebraLibPlugin } from './definitions';
+import type { StateChangeListener, ZebraLibPlugin } from './definitions';
 
 export class ZebraLibWeb extends WebPlugin implements ZebraLibPlugin {
 
@@ -22,5 +22,14 @@ export class ZebraLibWeb extends WebPlugin implements ZebraLibPlugin {
     console.log('Web Zebra Print is not supported', options);
     return options;
   }
+    // **Override** addListener to match the interface's signature
+    addListener(
+      eventName: 'printerStatusChange',
+      listenerFunc: StateChangeListener,
+    ): Promise<PluginListenerHandle> & PluginListenerHandle {
+      // Delegate to WebPlugin’s generic addListener
+      return super.addListener(eventName, listenerFunc) as
+        Promise<PluginListenerHandle> & PluginListenerHandle;
+    }
 
 }
