@@ -29,14 +29,14 @@ npx cap sync
 ### connectPrinter(...)
 
 ```typescript
-connectPrinter(options: { config: string; }) => Promise<any>
+connectPrinter(options: { config: string; }) => any
 ```
 
 | Param         | Type                             |
 | ------------- | -------------------------------- |
 | **`options`** | <code>{ config: string; }</code> |
 
-**Returns:** <code>Promise&lt;any&gt;</code>
+**Returns:** <code>any</code>
 
 --------------------
 
@@ -44,14 +44,14 @@ connectPrinter(options: { config: string; }) => Promise<any>
 ### printText(...)
 
 ```typescript
-printText(options: { text: string; }) => Promise<any>
+printText(options: { text: string; }) => any
 ```
 
 | Param         | Type                           |
 | ------------- | ------------------------------ |
 | **`options`** | <code>{ text: string; }</code> |
 
-**Returns:** <code>Promise&lt;any&gt;</code>
+**Returns:** <code>any</code>
 
 --------------------
 
@@ -59,14 +59,14 @@ printText(options: { text: string; }) => Promise<any>
 ### printPDF(...)
 
 ```typescript
-printPDF(options: { base64: string; }) => Promise<any>
+printPDF(options: { base64: string; }) => any
 ```
 
 | Param         | Type                             |
 | ------------- | -------------------------------- |
 | **`options`** | <code>{ base64: string; }</code> |
 
-**Returns:** <code>Promise&lt;any&gt;</code>
+**Returns:** <code>any</code>
 
 --------------------
 
@@ -82,7 +82,7 @@ addListener(eventName: 'printerStatusChange', listenerFunc: StateChangeListener)
 | **`eventName`**    | <code>"printerStatusChange"</code>            |
 | **`listenerFunc`** | <code>(state: ConnectState) =&gt; void</code> |
 
-**Returns:** <code>Promise&lt;<a href="#pluginlistenerhandle">PluginListenerHandle</a>&gt; & <a href="#pluginlistenerhandle">PluginListenerHandle</a></code>
+**Returns:** <code>any</code>
 
 --------------------
 
@@ -92,8 +92,8 @@ addListener(eventName: 'printerStatusChange', listenerFunc: StateChangeListener)
 
 #### PluginListenerHandle
 
-| Prop         | Type                                      |
-| ------------ | ----------------------------------------- |
-| **`remove`** | <code>() =&gt; Promise&lt;void&gt;</code> |
+| Prop         | Type                      |
+| ------------ | ------------------------- |
+| **`remove`** | <code>() =&gt; any</code> |
 
 </docgen-api>
