@@ -13,14 +13,14 @@
     "ios/Plugin/",
     "DolosplusZebraCapacitor.podspec"
   ],
-  "author": "Jak Ratiwanich",
+  "author": "bkarv",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jakratiwanich-ns/zebralib.git.git"
+    "url": "git+https://github.com/bkarv/zebralib.git"
   },
   "bugs": {
-    "url": "https://github.com/jakratiwanich-ns/zebralib.git/issues"
+    "url": "git+https://github.com/bkarv/zebralib.git/issues"
   },
   "keywords": [
     "capacitor",
