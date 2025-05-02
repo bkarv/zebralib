@@ -3,8 +3,10 @@
 #ifndef BkarvZebraCapacitor_Bridging_Header_h
 #define BkarvZebraCapacitor_Bridging_Header_h
 
-// Import any Zebra SDK headers you need to access from Swift
-// For example:
-// #import "libZSDK_API.h"
+// Import Zebra SDK headers - uncomment and modify these as needed
+#import "libZSDK_API.h" 
+// You might need additional imports like:
+// #import "ZebraPrinter.h"
+// #import "ZebraPrinterConnection.h"
 
 #endif /* BkarvZebraCapacitor_Bridging_Header_h */
