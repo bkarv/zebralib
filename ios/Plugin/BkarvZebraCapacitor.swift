@@ -1,5 +1,4 @@
 import Foundation
-mport BkarvZebraCapacitor // Import your module that contains the Objective-C headers
 @objc public class BkarvZebraCapacitor: NSObject {
     private var zebraConnection: Any? // Will be cast to the appropriate Zebra SDK type
     
