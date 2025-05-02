@@ -1,9 +1,6 @@
-// Current imports probably look like this:
 import Foundation
 import Capacitor
 
-// Add these explicit imports for Zebra SDK classes
-import BkarvZebraCapacitor // This imports your module with all the Obj-C headers exposed via the module map
 /**
  * Implementation of the BkarvZebraCapacitor plugin for iOS
  */
