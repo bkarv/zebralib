@@ -1,4 +1,6 @@
 import Foundation
+// Don't import the module itself - this creates a circular dependency
+
 @objc public class BkarvZebraCapacitor: NSObject {
     private var zebraConnection: Any? // Will be cast to the appropriate Zebra SDK type
     
