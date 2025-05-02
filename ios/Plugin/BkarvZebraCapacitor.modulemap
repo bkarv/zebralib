@@ -1,0 +1,6 @@
+framework module BkarvZebraCapacitor {
+  umbrella header "BkarvZebraCapacitorPlugin.h"
+  
+  export *
+  module * { export * }
+}

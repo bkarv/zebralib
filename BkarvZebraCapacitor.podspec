@@ -25,6 +25,12 @@ Pod::Spec.new do |s|
   # Swift version
   s.swift_version = '5.1'
 
+  # Properly expose headers
+  s.public_header_files = 'ios/Plugin/*.h'
+  
+  # Add module map instead of bridging header
+  s.module_map = 'ios/Plugin/BkarvZebraCapacitor.modulemap'
+
   # Library paths
   s.xcconfig = { 
     'LIBRARY_SEARCH_PATHS' => '$(PODS_TARGET_SRCROOT)/ios/Plugin',
@@ -32,10 +38,8 @@ Pod::Spec.new do |s|
     'SWIFT_INCLUDE_PATHS' => '$(PODS_TARGET_SRCROOT)/ios/Plugin'
   }
 
-  # Bridging header
-  s.preserve_paths = 'ios/Plugin/BkarvZebraCapacitor-Bridging-Header.h'
+  # Remove bridging header configuration
   s.pod_target_xcconfig = {
-    'SWIFT_OBJC_BRIDGING_HEADER' => '$(PODS_TARGET_SRCROOT)/ios/Plugin/BkarvZebraCapacitor-Bridging-Header.h',
     'ENABLE_BITCODE' => 'NO',
     'OTHER_LDFLAGS' => '-lZSDK_API'
   }
