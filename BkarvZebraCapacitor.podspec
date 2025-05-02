@@ -10,7 +10,8 @@ Pod::Spec.new do |s|
   s.homepage = package['repository']['url']
   s.author = package['author']
   s.source = { :git => package['repository']['url'], :tag => s.version.to_s }
-  s.source_files = 'ios/Plugin/**/*.{swift,h,m,c,cc,mm,cpp}'
+  s.source_files = 'ios/Plugin/**/*.{swift,m,c,cc,mm,cpp}'
+  s.public_header_files = 'ios/Plugin/*.h'
   s.ios.deployment_target = '14.0'
 
   # Properly include the Zebra library
